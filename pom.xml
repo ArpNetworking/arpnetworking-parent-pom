@@ -73,6 +73,7 @@
     <maven.source.plugin.version>2.4</maven.source.plugin.version>
     <maven.surefire.plugin.version>2.18.1</maven.surefire.plugin.version>
     <maven.surefire.report.plugin.version>2.18.1</maven.surefire.report.plugin.version>
+    <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
   </properties>
 
   <profiles>
@@ -103,6 +104,24 @@
               <xmlOutput>true</xmlOutput>
               <xmlOutputDirectory>${project.build.directory}</xmlOutputDirectory>
             </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${maven-gpg-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+                <configuration>
+                  <keyname>arpnet</keyname>
+                  <passphraseServerId>arpnet</passphraseServerId>
+                </configuration>
+              </execution>
+            </executions>
           </plugin>
         </plugins>
       </build>
