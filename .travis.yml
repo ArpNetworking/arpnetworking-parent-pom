@@ -4,6 +4,7 @@ jdk:
 cache:
   directories:
   - $HOME/.m2
+sudo: false
 env:
   global:
   - secure: dovZRGuiekrsL352tcxESTzzVmlWSOCXlMBLlGc/B3oRIoyVBrUDSnqNoFR0mzqoGSaxsXxDAJj4Et8Je4ulJrL7IkRl1bvCJNb7K7jcBbjElnD5E2ROgdH4rSX1wgBBvsxhkdEExdWxmpowmAyxkIXBIPttDxkkgJxFhx8lSU1nyV6wxonvI24JOC9Nqbj2w8ELOww+iA3meTJmwQG2PD88qpJJawGCYxzjAGcrvOUSoF41dPQBH484dnm+bF572O12gwzXdaR7MTWe3KfWSkqVKcpqlgr7jDwvV7X5AtGo/+wFuU4rqCkYmioOTBMBW3f4I5yfudol9vWJdSMYcQy+QCldJmXMgpTIjG0e0jZpsEnnvQANuPwwsTiyBxuBWOUfoTmiN4tAy3sNPimx+YyBeOo+psUZnT3Ibq2kPJvTef6+HEO5GVYDRU1UhQC6vDt71kO+Pcoj+AYy5q5K754ZxOlWdxoVoDX9yi4SFsBo/k00fyi2r04y5ZKThhrTYXaFTEqzB88o9jWFUyBs+IPhDBcLmnISBR48q5gz+lGDWELM9RySivSoINHs6gyiFV6ZmwQfrpCZfwMLUuvR4tPqd5QbPd+kYjVtv9LmoA9DnHN/oxRSlUHZgo0jS3SGOw8d4+YqoI6QUZmAFnYKwAxu5ua/OyNFRL29zyOCsbc=
@@ -15,4 +16,4 @@ before_script:
 script:
 - mvn verify install --settings settings.xml -P ci -Dgpg.skip=true
 after_success:
-- if [ \( "${TRAVIS_BRANCH}" = "master" -o -n "${TRAVIS_TAG}" \) -a  "${TRAVIS_PULL_REQUEST}" = "false" ]; then mvn deploy --settings settings.xml -P ci; fi;
+- if [ \( -n "${TRAVIS_TAG}" \) -a  "${TRAVIS_PULL_REQUEST}" = "false" ]; then mvn deploy --settings settings.xml -P ci; fi;
