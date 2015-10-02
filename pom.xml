@@ -170,7 +170,7 @@
             <parallel>methods</parallel>
             <threadCount>4</threadCount>
             <perCoreThreadCount>true</perCoreThreadCount>
-            <argLine>${argLine} -Xms512m -Xmx512m -ea -Duser.timezone="UTC"</argLine>
+            <argLine>${argLine} -Xms512m -ea -Duser.timezone="UTC"</argLine>
           </configuration>
         </plugin>
         <plugin>
