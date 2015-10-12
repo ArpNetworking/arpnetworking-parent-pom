@@ -157,6 +157,21 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
           <version>${maven.dependency.plugin.version}</version>
+          <executions>
+            <execution>
+              <id>analyze</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>analyze-only</goal>
+              </goals>
+              <configuration>
+                <failOnWarning>true</failOnWarning>
+                <ignoredDependencies>
+                  <ignoredDependency>com.arpnetworking.build:build-resources:jar:*</ignoredDependency>
+                </ignoredDependencies>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
