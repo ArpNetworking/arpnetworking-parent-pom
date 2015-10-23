@@ -439,7 +439,7 @@
           <version>${nexus.staging.plugin.version}</version>
           <configuration>
             <serverId>ossrh</serverId>
-            <nexusUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</nexusUrl>
+            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
             <autoReleaseAfterClose>true</autoReleaseAfterClose>
             <keepStagingRepositoryOnFailure>true</keepStagingRepositoryOnFailure>
             <keepStagingRepositoryOnCloseRuleFailure>true</keepStagingRepositoryOnCloseRuleFailure>
