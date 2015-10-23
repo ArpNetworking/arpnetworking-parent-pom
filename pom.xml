@@ -87,6 +87,7 @@
     <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
     <maven.jar.plugin.version>2.6</maven.jar.plugin.version>
     <maven.javadoc.plugin.version>2.10.3</maven.javadoc.plugin.version>
+    <nexus.staging.plugin.version>1.6.6</nexus.staging.plugin.version>
     <maven.project.info.reports.plugin.version>2.8.1</maven.project.info.reports.plugin.version>
     <maven.release.plugin.version>2.5.2</maven.release.plugin.version>
     <maven.resources.plugin.version>2.7</maven.resources.plugin.version>
@@ -140,6 +141,23 @@
                   <keyname>arpnet</keyname>
                   <passphraseServerId>arpnet</passphraseServerId>
                 </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+          </plugin>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>default-deploy</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>deploy</goal>
+                </goals>
               </execution>
             </executions>
           </plugin>
@@ -411,6 +429,21 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${maven.deploy.plugin.version}</version>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <version>${nexus.staging.plugin.version}</version>
+          <configuration>
+            <serverId>ossrh</serverId>
+            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+            <keepStagingRepositoryOnFailure>true</keepStagingRepositoryOnFailure>
+            <keepStagingRepositoryOnCloseRuleFailure>true</keepStagingRepositoryOnCloseRuleFailure>
+            <description>Project ${project.groupId}:${project.artifactId}:${project.version} at ${buildNumber}</description>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
