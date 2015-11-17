@@ -40,7 +40,7 @@ The Maven Central repository is included by default.
 
 ### Maven Wrapper
 
-The parent pom not only encourages and helps to enable the use of [Maven Wrapper](https://github.com/rimerosolutions/maven-wrapper) in child projects it uses Maven Wrapper itself. In order to ensure consistent builds you should invoke __mvnw__ instead of __mvn__ to build the project locally and from continuous integration.
+The parent pom enables the use of [Maven Wrapper](https://github.com/rimerosolutions/maven-wrapper) in child projects and it also uses Maven Wrapper itself. In order to ensure consistent builds you should invoke __mvnw__ instead of __mvn__ to build the project locally and from continuous integration.
 
 To allow developers to build wrapper and unwrapper projects seamlessly you can use this shell script to invoke either __mvnw__ or __mvn__ depending on which is available. Simply copy the script, make it executable and ensure it is first on __PATH__. Now continue to invoke __mvn__ and it will actually run __mvnw__ if available in the current project.
 
