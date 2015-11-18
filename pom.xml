@@ -72,7 +72,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!--Dependency versions-->
-    <build-resources.version>1.0.3</build-resources.version>
+    <build-resources.version>1.0.4</build-resources.version>
     <checkstyle.version>6.11.1</checkstyle.version>
 
     <!--Plugin versions-->
@@ -306,9 +306,10 @@
                 <maxAllowedViolations>0</maxAllowedViolations>
                 <configLocation>checkstyle.xml</configLocation>
                 <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                <propertyExpansion>suppressions.file=${project.build.directory}/checkstyle-suppressions.xml</propertyExpansion>
-                <propertyExpansion>samedir=${project.build.directory}</propertyExpansion>
-                <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
+                <propertyExpansion>
+                     suppressions_file=${project.build.directory}/checkstyle-suppressions.xml
+                     header_file=${project.build.directory}/al2
+                </propertyExpansion>
                 <linkXRef>false</linkXRef>
               </configuration>
             </execution>
