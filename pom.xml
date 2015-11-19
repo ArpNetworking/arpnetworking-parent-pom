@@ -264,6 +264,14 @@
                 <threadCount>4</threadCount>
                 <perCoreThreadCount>true</perCoreThreadCount>
                 <argLine>${argLine} -Xms512m -ea -Duser.timezone="UTC"</argLine>
+                <includes>
+                  <include>**/Test*.java</include>
+                  <include>**/*Test.java</include>
+                  <include>**/*TestCase.java</include>
+                  <include>**/Test*.kt</include>
+                  <include>**/*Test.kt</include>
+                  <include>**/*TestCase.kt</include>
+                </includes>
               </configuration>
             </execution>
           </executions>
@@ -491,6 +499,10 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>com.rimerosolutions.maven.plugins</groupId>
         <artifactId>wrapper-maven-plugin</artifactId>
