@@ -38,6 +38,12 @@ Set the parent to your pom:
 
 The Maven Central repository is included by default.
 
+### Checkstyle
+
+The checkstyle configuration is obtained from the [build-resources]() package.  The checkstyle mojo is executed as part of the __verify__ lifecycle.  However, the mojo can also be executed directly.  In order to execute the checkstyle mojo directly you need to also ensure the build-resources are extracted.
+
+    project> mvn dependency:unpack-dependencies checkstyle:check
+
 ### Maven Wrapper
 
 The parent pom enables the use of [Maven Wrapper](https://github.com/rimerosolutions/maven-wrapper) in child projects and it also uses Maven Wrapper itself. In order to ensure consistent builds you should invoke __mvnw__ instead of __mvn__ to build the project locally and from continuous integration.

@@ -72,7 +72,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!--Dependency versions-->
-    <build-resources.version>1.0.4</build-resources.version>
+    <build-resources.version>1.0.5</build-resources.version>
     <checkstyle.version>6.11.1</checkstyle.version>
 
     <!--Plugin versions-->
@@ -213,6 +213,7 @@
               </goals>
               <configuration>
                 <failOnWarning>true</failOnWarning>
+                <ignoreNonCompile>true</ignoreNonCompile>
                 <ignoredDependencies>
                   <ignoredDependency>com.arpnetworking.build:build-resources:jar:*</ignoredDependency>
                 </ignoredDependencies>
@@ -291,6 +292,14 @@
           <version>${maven.failsafe.plugin.version}</version>
           <configuration>
             <skipTests>${skipIntegrationTests}</skipTests>
+            <includes>
+              <include>**/IT*.java</include>
+              <include>**/*IT.java</include>
+              <include>**/*ITCase.java</include>
+              <include>**/IT*.kt</include>
+              <include>**/*IT.kt</include>
+              <include>**/*ITCase.kt</include>
+            </includes>
           </configuration>
         </plugin>
         <plugin>
@@ -308,20 +317,22 @@
               </goals>
               <configuration>
                 <skip>${skipCheckstyle}</skip>
-                <consoleOutput>true</consoleOutput>
-                <logViolationsToConsole>true</logViolationsToConsole>
-                <failOnViolation>true</failOnViolation>
-                <maxAllowedViolations>0</maxAllowedViolations>
-                <configLocation>checkstyle.xml</configLocation>
-                <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                <propertyExpansion>
-                     suppressions_file=${project.build.directory}/checkstyle-suppressions.xml
-                     header_file=${project.build.directory}/al2
-                </propertyExpansion>
-                <linkXRef>false</linkXRef>
               </configuration>
             </execution>
           </executions>
+          <configuration>
+            <consoleOutput>true</consoleOutput>
+            <logViolationsToConsole>true</logViolationsToConsole>
+            <failOnViolation>true</failOnViolation>
+            <maxAllowedViolations>0</maxAllowedViolations>
+            <configLocation>checkstyle.xml</configLocation>
+            <includeTestSourceDirectory>true</includeTestSourceDirectory>
+            <propertyExpansion>
+              suppressions_file=${project.build.directory}/checkstyle-suppressions.xml
+              header_file=${project.build.directory}/al2
+            </propertyExpansion>
+            <linkXRef>false</linkXRef>
+          </configuration>
           <dependencies>
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
@@ -523,13 +534,13 @@
               <goal>unpack-dependencies</goal>
             </goals>
             <phase>generate-resources</phase>
-            <configuration>
-              <outputDirectory>${project.build.directory}</outputDirectory>
-              <includeArtifactIds>build-resources</includeArtifactIds>
-              <includeGroupIds>com.arpnetworking.build</includeGroupIds>
-            </configuration>
           </execution>
         </executions>
+        <configuration>
+          <outputDirectory>${project.build.directory}</outputDirectory>
+          <includeArtifactIds>build-resources</includeArtifactIds>
+          <includeGroupIds>com.arpnetworking.build</includeGroupIds>
+        </configuration>
       </plugin>
     </plugins>
   </build>
