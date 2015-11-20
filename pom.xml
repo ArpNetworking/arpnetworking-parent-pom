@@ -105,6 +105,10 @@
     <jacoco.check.line.coverage>0.0</jacoco.check.line.coverage>
     <jacoco.check.branch.coverage>0.0</jacoco.check.branch.coverage>
 
+    <!-- Deploy Plugin -->
+    <!-- NOTE: True by default to faciliate use of nexus-staging-maven-plugin -->
+    <skipDeploy>true</skipDeploy>
+
     <!-- Verification Knobs -->
     <skipAllVerification>false</skipAllVerification>
     <skipUnitTests>false</skipUnitTests>
@@ -450,7 +454,7 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${maven.deploy.plugin.version}</version>
           <configuration>
-            <skip>true</skip>
+            <skip>${skipDeploy}</skip>
           </configuration>
         </plugin>
         <plugin>
