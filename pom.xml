@@ -601,7 +601,7 @@
           <configLocation>checkstyle.xml</configLocation>
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
           <suppressionsFileExpression>suppressions_file</suppressionsFileExpression>
-          <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
+          <suppressionsLocation>${project.build.directory}/checkstyle-suppressions.xml</suppressionsLocation>
           <propertyExpansion>
             header_file=${project.build.directory}/al2
           </propertyExpansion>
