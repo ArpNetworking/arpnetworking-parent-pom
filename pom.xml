@@ -76,7 +76,7 @@
 
     <!--Dependency versions-->
     <build-resources.version>1.0.5</build-resources.version>
-    <checkstyle.version>6.12.1</checkstyle.version>
+    <checkstyle.version>6.13</checkstyle.version>
 
     <!--Plugin versions-->
     <appassembler.maven.plugin.version>1.10</appassembler.maven.plugin.version>
