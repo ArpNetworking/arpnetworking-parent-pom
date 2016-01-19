@@ -3,6 +3,7 @@ Dependencies
 
 The following table lists the dependencies of the ArpNetworking parent pom and their licenses.
 
+
 Build Tool Dependencies
 ------------------
 
@@ -34,6 +35,7 @@ Maven Surefire Plugin          | Apache License 2           | https://maven.apac
 Maven Surefire Report Plugin   | Apache License 2           | https://maven.apache.org/surefire/maven-surefire-report-plugin/
 Maven Versions Plugin          | Apache License 2           | http://www.mojohaus.org/versions-maven-plugin/
 Maven Wrapper Plugin           | Apache License 2           | https://github.com/rimerosolutions/maven-wrapper-example
+
 
 Compile Dependencies
 --------------------
