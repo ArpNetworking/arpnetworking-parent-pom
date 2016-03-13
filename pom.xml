@@ -325,16 +325,6 @@
                 <skip>${skipCheckstyle}</skip>
               </configuration>
             </execution>
-            <execution>
-              <id>default-checkstyle-aggregate</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>checkstyle-aggregate</goal>
-              </goals>
-              <configuration>
-                <skip>${skipCheckstyle}</skip>
-              </configuration>
-            </execution>
           </executions>
           <configuration>
             <consoleOutput>true</consoleOutput>
