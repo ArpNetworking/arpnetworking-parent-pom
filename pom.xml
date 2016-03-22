@@ -67,8 +67,8 @@
     <jdk.version>1.8.0</jdk.version>
 
     <!-- Maven Wrapper -->
-    <maven.version>3.3.3</maven.version>
-    <maven.base.distribution.url>http://maven.ibiblio.org/maven2/org/apache/maven/apache-maven/</maven.base.distribution.url>
+    <maven.version>3.3.9</maven.version>
+    <maven.base.distribution.url>https://repo1.maven.org/maven2/org/apache/maven/apache-maven/</maven.base.distribution.url>
 
     <!-- Compiler Settings -->
     <maven.compiler.source>1.8</maven.compiler.source>
