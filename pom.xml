@@ -105,7 +105,7 @@
     <findbugs.exclude />
 
     <!-- Code Coverage -->
-    <jacoco.maven.plugin.version>0.7.5.201505241946</jacoco.maven.plugin.version>
+    <jacoco.maven.plugin.version>0.7.6.201602180812</jacoco.maven.plugin.version>
     <jacoco.check.line.coverage>0.0</jacoco.check.line.coverage>
     <jacoco.check.branch.coverage>0.0</jacoco.check.branch.coverage>
 
