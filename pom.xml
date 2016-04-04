@@ -453,6 +453,8 @@
           <version>${maven.release.plugin.version}</version>
           <configuration>
             <branchName>release-${project.version}</branchName>
+            <updateBranchVersions>true</updateBranchVersions>
+            <updateWorkingCopyVersions>false</updateWorkingCopyVersions>
           </configuration>
         </plugin>
         <plugin>
