@@ -56,7 +56,7 @@
     <connection>scm:git:git@github.com:ArpNetworking/arpnetworking-parent-pom.git</connection>
     <developerConnection>scm:git:git@github.com:ArpNetworking/arpnetworking-parent-pom.git</developerConnection>
     <url>https://github.com/arpnetworking/arpnetworking-parent-pom</url>
-    <tag>HEAD</tag>
+    <tag>release-1.0.23-SNAPSHOT</tag>
   </scm>
 
   <properties>
