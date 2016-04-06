@@ -64,6 +64,8 @@ else
 fi
 ```
 
+Please note that your environment should have JAVA_HOME set correctly.
+
 Building
 --------
 
