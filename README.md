@@ -54,14 +54,32 @@ To allow developers to build wrapper and unwrapper projects seamlessly you can u
 #!/bin/bash
 
 # Look for maven wrapper
+MVN_COMMAND=""
 if [ -f "./mvnw" ]; then
   echo "Maven wrapper found; invoking mvnw"
-  echo "./mvnw $@"
-  ./mvnw "$@"
+  MVN_COMMAND="./mvnw"
 else
   echo "Maven wrapper not found; invoking mvn"
-  /usr/local/bin/mvn "$@"
+  MVN_COMMAND="/usr/local/bin/mvn"
 fi
+
+# Look for jdk wrapper
+if [ -f ".jdkw" ]; then
+  JDKW_REMOTE="https://raw.githubusercontent.com/vjkoskela/jdk-wrapper/master/jdk-wrapper.sh"
+  JDKW_LOCAL="${HOME}/.jdk/jdk-wrapper.sh"
+  mkdir -p "$(dirname "${JDKW_LOCAL}")"
+  if [ -f "${JDKW_LOCAL}" ]; then
+    curl "${JDKW_REMOTE}" -z "${JDKW_LOCAL}" -o "${JDKW_LOCAL}" --silent --location
+  else
+    curl "${JDKW_REMOTE}" -o "${JDKW_LOCAL}" --silent --location
+  fi
+  chmod +x "${JDKW_LOCAL}"
+  MVN_COMMAND="${JDKW_LOCAL} ${MVN_COMMAND}"
+fi
+
+# Execute
+eval "${MVN_COMMAND}" "$@"
+exit $?
 ```
 
 Please note that your environment should have JAVA_HOME set correctly.
