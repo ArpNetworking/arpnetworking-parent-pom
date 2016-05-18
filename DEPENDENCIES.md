@@ -9,7 +9,7 @@ Build Tool Dependencies
 
 Project                        | License                    | Project link
 -------------------------------|----------------------------|-------------
-Build Resources                | Apache License 2           | https://github.com/groupon/api-build-resources
+Build Resources                | Apache License 2           | https://github.com/ArpNetworking/build-resources
 App Assembler Maven Plugin     | Apache License 2           | http://www.mojohaus.org/appassembler/appassembler-maven-plugin/
 Checkstyle                     | LGPL 2                     | http://checkstyle.sourceforge.net/
 FindBugs                       | LGPL                       | http://findbugs.sourceforge.net/
