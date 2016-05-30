@@ -64,7 +64,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- JDK -->
-    <jdk.version>1.8.0-77</jdk.version>
+    <jdk.version>1.8.0-92</jdk.version>
 
     <!-- Maven Wrapper -->
     <maven.version>3.3.9</maven.version>
@@ -527,10 +527,10 @@
               <configuration>
                 <rules>
                   <requireJavaVersion>
-                    <version>${jdk.version}</version>
+                    <version>[${jdk.version}]</version>
                   </requireJavaVersion>
                   <requireMavenVersion>
-                    <version>${maven.version}</version>
+                    <version>[${maven.version}]</version>
                   </requireMavenVersion>
                 </rules>
               </configuration>
