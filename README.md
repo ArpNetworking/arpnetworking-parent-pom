@@ -53,6 +53,8 @@ To allow developers to build wrapper and unwrapper projects seamlessly you can u
 ```bash
 #!/bin/bash
 
+JDKW_OPTIONS=""
+
 # Look for maven wrapper
 MVN_COMMAND=""
 if [ -f "./mvnw" ]; then
@@ -74,7 +76,7 @@ if [ -f ".jdkw" ]; then
     curl "${JDKW_REMOTE}" -o "${JDKW_LOCAL}" --silent --location
   fi
   chmod +x "${JDKW_LOCAL}"
-  MVN_COMMAND="${JDKW_LOCAL} ${MVN_COMMAND}"
+  MVN_COMMAND="${JDKW_LOCAL} ${JDKW_OPTIONS} ${MVN_COMMAND}"
 fi
 
 # Execute
