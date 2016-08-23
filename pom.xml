@@ -281,6 +281,7 @@
                 <parallel>methods</parallel>
                 <threadCount>4</threadCount>
                 <perCoreThreadCount>true</perCoreThreadCount>
+                <trimStackTrace>false</trimStackTrace>
                 <argLine>${argLine} -Xms512m -ea -Duser.timezone="UTC"</argLine>
                 <includes>
                   <include>**/Test*.java</include>
