@@ -22,7 +22,7 @@
   <name>ArpNetworking Parent POM</name>
   <description>A parent pom file used for ArpNetworking builds.</description>
   <url>https://github.com/arpnetworking/arpnetworking-parent-pom</url>
-  <version>1.1.0</version>
+  <version>1.1.1-SNAPSHOT</version>
 
   <licenses>
     <license>
@@ -56,7 +56,7 @@
     <connection>scm:git:git@github.com:ArpNetworking/arpnetworking-parent-pom.git</connection>
     <developerConnection>scm:git:git@github.com:ArpNetworking/arpnetworking-parent-pom.git</developerConnection>
     <url>https://github.com/arpnetworking/arpnetworking-parent-pom</url>
-    <tag>arpnetworking-parent-pom-1.1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
