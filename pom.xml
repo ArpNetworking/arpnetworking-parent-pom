@@ -64,7 +64,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- JDK -->
-    <jdk.version>1.8.0-144</jdk.version>
+    <jdk.version>1.8.0-151</jdk.version>
 
     <!-- Maven Wrapper -->
     <maven.version>3.5.0</maven.version>
@@ -457,6 +457,9 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>buildnumber-maven-plugin</artifactId>
           <version>${maven.buildnumber.plugin.version}</version>
+          <configuration>
+            <revisionOnScmFailure>UNKNOWN</revisionOnScmFailure>
+          </configuration>
           <executions>
             <execution>
               <phase>validate</phase>
