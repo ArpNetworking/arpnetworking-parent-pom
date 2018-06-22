@@ -108,7 +108,7 @@
     <findbugs.exclude>${project.build.directory}/findbugs.exclude.xml</findbugs.exclude>
 
     <!-- Code Coverage -->
-    <jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>
+    <jacoco.maven.plugin.version>0.8.1</jacoco.maven.plugin.version>
     <jacoco.check.line.coverage>0.0</jacoco.check.line.coverage>
     <jacoco.check.branch.coverage>0.0</jacoco.check.branch.coverage>
 
