@@ -75,7 +75,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!--Dependency versions-->
-    <build-resources.version>1.2.7</build-resources.version>
+    <build-resources.version>1.2.8</build-resources.version>
     <checkstyle.version>8.16</checkstyle.version>
 
     <!--Plugin versions-->
@@ -106,6 +106,9 @@
 
     <!-- Findbugs -->
     <findbugs.exclude>${project.build.directory}/findbugs.exclude.xml</findbugs.exclude>
+
+    <!-- Checkstyle -->
+    <checkstyleExtraSuppressions>${project.build.directory}/build-resources/extra-checkstyle-suppressions.xml</checkstyleExtraSuppressions>
 
     <!-- Code Coverage -->
     <jacoco.maven.plugin.version>0.8.1</jacoco.maven.plugin.version>
@@ -366,6 +369,7 @@
             <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
             <propertyExpansion>
               header_file=${project.build.directory}/al2
+              extra_suppressions_file=${checkstyleExtraSuppressions}
             </propertyExpansion>
             <linkXRef>false</linkXRef>
           </configuration>
