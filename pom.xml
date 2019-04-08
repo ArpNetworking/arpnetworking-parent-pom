@@ -75,7 +75,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!--Dependency versions-->
-    <build-resources.version>1.2.8</build-resources.version>
+    <build-resources.version>1.2.9</build-resources.version>
     <checkstyle.version>8.16</checkstyle.version>
 
     <!--Plugin versions-->
@@ -184,6 +184,77 @@
         <skipFindbugs>true</skipFindbugs>
         <skipCheckstyle>true</skipCheckstyle>
         <skipCoverage>true</skipCoverage>
+      </properties>
+    </profile>
+    <profile>
+      <id>verifyCheckstyleOnly</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <property>
+          <name>verifyCheckstyleOnly</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <properties>
+        <skipUnitTests>true</skipUnitTests>
+        <skipIntegrationTests>true</skipIntegrationTests>
+        <skipFindbugs>true</skipFindbugs>
+        <skipCoverage>true</skipCoverage>
+        <skipJavaDoc>true</skipJavaDoc>
+        <skipSource>true</skipSource>
+      </properties>
+    </profile>
+    <profile>
+      <id>verifyFindbugsOnly</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <property>
+          <name>verifyFindbugsOnly</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <properties>
+        <skipUnitTests>true</skipUnitTests>
+        <skipIntegrationTests>true</skipIntegrationTests>
+        <skipCheckstyle>true</skipCheckstyle>
+        <skipCoverage>true</skipCoverage>
+        <skipJavaDoc>true</skipJavaDoc>
+        <skipSource>true</skipSource>
+      </properties>
+    </profile>
+    <profile>
+      <id>verifyCoverageOnly</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <property>
+          <name>verifyCoverageOnly</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <properties>
+        <skipIntegrationTests>true</skipIntegrationTests>
+        <skipFindbugs>true</skipFindbugs>
+        <skipCheckstyle>true</skipCheckstyle>
+        <skipJavaDoc>true</skipJavaDoc>
+        <skipSource>true</skipSource>
+      </properties>
+    </profile>
+    <profile>
+      <id>verifyIntegrationTestsOnly</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <property>
+          <name>verifyIntegrationTestsOnly</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <properties>
+        <skipUnitTests>true</skipUnitTests>
+        <skipFindbugs>true</skipFindbugs>
+        <skipCheckstyle>true</skipCheckstyle>
+        <skipCoverage>true</skipCoverage>
+        <skipJavaDoc>true</skipJavaDoc>
+        <skipSource>true</skipSource>
       </properties>
     </profile>
   </profiles>
