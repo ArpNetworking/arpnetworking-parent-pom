@@ -108,7 +108,7 @@
     <findbugs.exclude>${project.build.directory}/findbugs.exclude.xml</findbugs.exclude>
 
     <!-- Checkstyle -->
-    <checkstyleExtraSuppressions>${project.build.directory}/build-resources/extra-checkstyle-suppressions.xml</checkstyleExtraSuppressions>
+    <checkstyleExtraSuppressions>${project.build.directory}/checkstyle-extra-suppressions.xml</checkstyleExtraSuppressions>
 
     <!-- Code Coverage -->
     <jacoco.maven.plugin.version>0.8.1</jacoco.maven.plugin.version>
