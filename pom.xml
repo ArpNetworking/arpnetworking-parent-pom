@@ -408,6 +408,7 @@
           </executions>
           <configuration>
             <skipTests>${skipIntegrationTests}</skipTests>
+            <trimStackTrace>false</trimStackTrace>
             <includes>
               <include>**/*IT.java</include>
               <include>**/*IT.kt</include>
