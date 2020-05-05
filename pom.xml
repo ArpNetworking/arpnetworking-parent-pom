@@ -76,7 +76,7 @@
 
     <!--Dependency versions-->
     <build-resources.version>2.0.1</build-resources.version>
-    <checkstyle.version>8.25</checkstyle.version>
+    <checkstyle.version>8.29</checkstyle.version>
     <spotbugs.version>3.1.12</spotbugs.version>
 
     <!--Plugin versions-->
