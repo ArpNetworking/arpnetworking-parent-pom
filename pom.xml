@@ -762,6 +762,7 @@
             </goals>
             <phase>validate</phase>
           </execution>
+	  <!-- disabled due to hangs caused by https://github.com/mojohaus/versions-maven-plugin/issues/354
           <execution>
             <id>default-display-plugin-updates</id>
             <goals>
@@ -769,6 +770,7 @@
             </goals>
             <phase>validate</phase>
           </execution>
+	  -->
         </executions>
       </plugin>
     </plugins>
