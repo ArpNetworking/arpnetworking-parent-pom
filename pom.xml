@@ -64,7 +64,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- JDK -->
-    <jdk.version>11.0.14</jdk.version>
+    <jdk.version>17.0.4</jdk.version>
 
     <!-- Maven Wrapper -->
     <maven.version>3.8.4</maven.version>
