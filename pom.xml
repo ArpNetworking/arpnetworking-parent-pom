@@ -76,8 +76,8 @@
 
     <!--Dependency versions-->
     <build-resources.version>3.0.0</build-resources.version>
-    <checkstyle.version>9.2.1</checkstyle.version>
-    <spotbugs.version>4.5.3</spotbugs.version>
+    <checkstyle.version>10.3.2</checkstyle.version>
+    <spotbugs.version>4.7.1</spotbugs.version>
 
     <!--Plugin versions-->
     <appassembler.maven.plugin.version>2.1.0</appassembler.maven.plugin.version>
