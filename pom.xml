@@ -379,9 +379,8 @@
               </goals>
               <configuration>
                 <skipTests>${skipUnitTests}</skipTests>
-                <parallel>methods</parallel>
-                <threadCount>4</threadCount>
-                <perCoreThreadCount>true</perCoreThreadCount>
+                <parallel>all</parallel>
+                <useUnlimitedThreads>true</useUnlimitedThreads>
                 <trimStackTrace>false</trimStackTrace>
                 <argLine>${argLine} -Xms512m -ea -Duser.timezone="UTC"</argLine>
                 <includes>
@@ -415,6 +414,8 @@
           </executions>
           <configuration>
             <skipTests>${skipIntegrationTests}</skipTests>
+            <parallel>all</parallel>
+            <useUnlimitedThreads>true</useUnlimitedThreads>
             <trimStackTrace>false</trimStackTrace>
             <includes>
               <include>**/*IT.java</include>
