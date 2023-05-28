@@ -76,13 +76,13 @@
 
     <!--Dependency versions-->
     <build-resources.version>3.0.0</build-resources.version>
-    <checkstyle.version>10.9.3</checkstyle.version>
+    <checkstyle.version>10.12.0</checkstyle.version>
     <spotbugs.version>4.7.3</spotbugs.version>
 
     <!--Plugin versions-->
     <appassembler.maven.plugin.version>2.1.0</appassembler.maven.plugin.version>
     <maven.buildnumber.plugin.version>3.0.0</maven.buildnumber.plugin.version>
-    <maven.checkstyle.plugin.version>3.2.1</maven.checkstyle.plugin.version>
+    <maven.checkstyle.plugin.version>3.3.0</maven.checkstyle.plugin.version>
     <maven.clean.plugin.version>3.2.0</maven.clean.plugin.version>
     <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
     <maven.dependency.plugin.version>3.5.0</maven.dependency.plugin.version>
@@ -191,6 +191,8 @@
                   <includes>
                     <include>**/*PT.java</include>
                     <include>**/*PT.kt</include>
+                    <include>**/*TestPerf.java</include>
+                    <include>**/*TestPerf.kt</include>
                   </includes>
                   <systemPropertyVariables>
                     <logback.configurationFile>${basedir}/src/test/resources/logback-perf.xml</logback.configurationFile>
@@ -488,6 +490,12 @@
               header_file=${project.build.directory}/al2
               extra_suppressions_file=${checkstyleExtraSuppressions}
             </propertyExpansion>
+	    <sourceDirectories>
+	      <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+            </sourceDirectories>
+	    <testSourceDirectories>
+	      <testSourceDirectory>${project.build.testSourceDirectory}</testSourceDirectory>
+            </testSourceDirectories>
             <linkXRef>false</linkXRef>
           </configuration>
           <dependencies>
