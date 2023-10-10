@@ -101,7 +101,7 @@
     <maven.spotbugs.plugin.version>4.7.3.6</maven.spotbugs.plugin.version>
     <maven.surefire.plugin.version>3.1.2</maven.surefire.plugin.version>
     <maven.surefire.report.plugin.version>3.1.2</maven.surefire.report.plugin.version>
-    <maven.versions.plugin.version>2.16.0</maven.versions.plugin.version>
+    <maven.versions.plugin.version>2.16.1</maven.versions.plugin.version>
     <maven.wrapper.plugin.version>0.0.5</maven.wrapper.plugin.version>
     <nexus.staging.plugin.version>1.6.13</nexus.staging.plugin.version>
 
