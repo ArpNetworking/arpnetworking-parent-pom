@@ -420,7 +420,7 @@
                 <parallel>all</parallel>
                 <useUnlimitedThreads>true</useUnlimitedThreads>
                 <trimStackTrace>false</trimStackTrace>
-                <argLine>${argLine} -Xms512m -ea -Duser.timezone="UTC"</argLine>
+                <argLine>@{argLine} -Xms512m -ea -Duser.timezone="UTC"</argLine>
                 <includes>
                   <include>**/*Test.java</include>
                   <include>**/*Test.kt</include>
