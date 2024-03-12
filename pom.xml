@@ -64,10 +64,10 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- JDK -->
-    <jdk.version>17.0.6</jdk.version>
+    <jdk.version>21.0.2</jdk.version>
 
     <!-- Maven Wrapper -->
-    <maven.version>3.8.7</maven.version>
+    <maven.version>3.9.6</maven.version>
     <maven.base.distribution.url>https://repo1.maven.org/maven2/org/apache/maven/apache-maven/</maven.base.distribution.url>
 
     <!-- Compiler Settings -->
@@ -76,7 +76,7 @@
 
     <!--Dependency versions-->
     <build-resources.version>3.0.2</build-resources.version>
-    <checkstyle.version>10.14.0</checkstyle.version>
+    <checkstyle.version>10.14.1</checkstyle.version>
     <spotbugs.version>4.8.3</spotbugs.version>
 
     <!--Plugin versions-->
