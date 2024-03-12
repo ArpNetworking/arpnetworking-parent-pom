@@ -405,7 +405,6 @@
               </goals>
               <configuration>
                 <keyname>arpnet</keyname>
-                <passphraseServerId>arpnet</passphraseServerId>
                 <!-- Required by GHA
                      See: https://github.com/samuelmeuli/action-maven-publish/issues/1
                 -->
@@ -413,6 +412,7 @@
                   <arg>--pinentry-mode</arg>
                   <arg>loopback</arg>
                 </gpgArguments>
+                <passphraseEnvName>GPG_PASS</passphraseEnvName>
               </configuration>
             </execution>
           </executions>
