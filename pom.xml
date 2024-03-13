@@ -71,8 +71,7 @@
     <maven.base.distribution.url>https://repo1.maven.org/maven2/org/apache/maven/apache-maven/</maven.base.distribution.url>
 
     <!-- Compiler Settings -->
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.release>17</maven.compiler.release>
 
     <!--Dependency versions-->
     <build-resources.version>3.0.2</build-resources.version>
