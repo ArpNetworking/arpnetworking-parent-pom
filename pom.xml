@@ -388,7 +388,7 @@
           <configuration>
             <repositoryLayout>flat</repositoryLayout>
             <repositoryName>lib</repositoryName>
-            <unixScriptTemplate>${project.basedir}/target/build-resources/unixBinTemplate</unixScriptTemplate>
+            <unixScriptTemplate>${project.build.directory}/appAssemblerUnixBinTemplate</unixScriptTemplate>
           </configuration>
         </plugin>
         <plugin>
