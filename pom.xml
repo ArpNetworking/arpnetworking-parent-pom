@@ -27,7 +27,7 @@
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
 
@@ -36,7 +36,7 @@
       <id>barp</id>
       <email>brandon.arp@inscopemetrics.com</email>
       <organization>Inscope Metrics</organization>
-      <organizationUrl>http://www.inscopemetrics.com</organizationUrl>
+      <organizationUrl>https://www.inscopemetrics.com</organizationUrl>
       <roles>
         <role>developer</role>
       </roles>
@@ -45,7 +45,7 @@
       <id>vkoskela</id>
       <email>ville.koskela@inscopemetrics.com</email>
       <organization>Inscope Metrics</organization>
-      <organizationUrl>http://www.inscopemetrics.com</organizationUrl>
+      <organizationUrl>https://www.inscopemetrics.com</organizationUrl>
       <roles>
         <role>developer</role>
       </roles>
@@ -433,7 +433,7 @@
                 <threadCount>2</threadCount>
                 <perCoreThreadCount>true</perCoreThreadCount>
                 <trimStackTrace>false</trimStackTrace>
-                <argLine>@{argLine} -Xms512m -ea -Duser.timezone="UTC"</argLine>
+                <argLine>@{argLine} -Xms512m -ea -Duser.timezone="UTC" -XX:+EnableDynamicAgentLoading</argLine>
                 <includes>
                   <include>**/Test*.java</include>
                   <include>**/*Test.java</include>
@@ -674,7 +674,7 @@
             <stagingProgressTimeoutMinutes>15</stagingProgressTimeoutMinutes>
             <keepStagingRepositoryOnFailure>true</keepStagingRepositoryOnFailure>
             <keepStagingRepositoryOnCloseRuleFailure>true</keepStagingRepositoryOnCloseRuleFailure>
-            <description>Project ${project.groupId}:${project.artifactId}:${project.version} at ${buildNumber}</description>
+            <stagingDescription>Project ${project.groupId}:${project.artifactId}:${project.version} at ${buildNumber}</stagingDescription>
           </configuration>
         </plugin>
         <plugin>
