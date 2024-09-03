@@ -80,7 +80,7 @@
 
     <!--Plugin versions-->
     <appassembler.maven.plugin.version>2.1.0</appassembler.maven.plugin.version>
-    <maven.buildnumber.plugin.version>3.2.0</maven.buildnumber.plugin.version>
+    <maven.buildnumber.plugin.version>3.2.1</maven.buildnumber.plugin.version>
     <maven.checkstyle.plugin.version>3.5.0</maven.checkstyle.plugin.version>
     <maven.clean.plugin.version>3.4.0</maven.clean.plugin.version>
     <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
