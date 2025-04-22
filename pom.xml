@@ -74,8 +74,8 @@
     <maven.compiler.release>17</maven.compiler.release>
 
     <!--Dependency versions-->
-    <build-resources.version>3.0.2</build-resources.version>
-    <checkstyle.version>10.18.2</checkstyle.version>
+    <build-resources.version>3.0.3</build-resources.version>
+    <checkstyle.version>10.23.0</checkstyle.version>
     <spotbugs.version>4.8.6</spotbugs.version>
 
     <!--Plugin versions-->
