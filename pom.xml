@@ -658,6 +658,7 @@
           <groupId>org.sonatype.central</groupId>
           <artifactId>central-publishing-maven-plugin</artifactId>
           <version>${central.publishing.plugin.version}</version>
+          <extensions>true</extensions>
           <executions>
             <execution>
               <id>default-deploy</id>
