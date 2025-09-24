@@ -103,7 +103,7 @@
     <maven.surefire.report.plugin.version>3.5.4</maven.surefire.report.plugin.version>
     <maven.versions.plugin.version>2.19.1</maven.versions.plugin.version>
     <maven.wrapper.plugin.version>0.0.5</maven.wrapper.plugin.version>
-    <central.publishing.plugin.version>0.8.0</central.publishing.plugin.version>
+    <central.publishing.plugin.version>0.9.0</central.publishing.plugin.version>
 
     <!-- Checkstyle -->
     <checkstyleExtraSuppressions>${project.build.directory}/checkstyle-extra-suppressions.xml</checkstyleExtraSuppressions>
